@@ -1,0 +1,36 @@
+DML – DATA MANIPULATION LANGUAGE (INSERT, UPDATE, DELETE)
+----------------------------------------------------------
+INSERT:
+---------
+    INSERT INTO <table_name> (col1, col2, col3,..)
+    VALUES (value1, value2, value3,..);
+
+e.g: INSERT INTO customers (id, first_name, country, score) 
+     VALUES (10, ‘Vardhan’, ‘India’, 100);
+
+Note: we can discard nullable columns and can insert data into not null columns.
+e.g: INSERT INTO customers (id, first_name)
+     VALUES (11, ‘Balu’);
+
+Note: if you want to insert data from a source table to empty target table, use below command:
+    INSERT INTO persons (id, person_name, birth_date, phone)
+    SELECT Id, first_name, NULL, ‘unknown’
+    FROM customers;
+
+UPDATE: update existing values with new values:
+-----------------------------------------------
+    UPDATE <table_name>
+    SET col1=value1, col2=value2
+    WHERE condition;
+
+Note: always use WHERE to avoid updating all rows unintentionally.
+    UPDATE customers
+    SET score=0, country=’UK’
+    WHERE id=10;
+
+DELETE: deletes entire data or specific data from table:
+--------------------------------------------------------
+DELETE FROM table_name;
+
+e.g: DELETE FROM customers
+     WHERE id > 5;
