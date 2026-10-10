@@ -1,5 +1,7 @@
 SQL for Data Engineering
+
 # Basic:
+------------------
   1.	Introduction
   a.	What is SQL
   b.	What is Database
@@ -27,14 +29,13 @@ SQL for Data Engineering
   c.	Delete
 
 # Intermediate:
+----------------
 5.	Filtering Data
   a.	Comparison operators
   b.	Logical operators
   c.	Between
   d.	In
   e.	Like
-
-
 
 6.	Combining Data
   a.	Joining data
@@ -70,7 +71,9 @@ SQL for Data Engineering
       c.	Window Aggregate functions
       d.	Window ranking functions
       e.	Window value functions
+
 # Advanced:
+---------------------------
   9.	Advanced SQL Techniques
       a.	Subqueries
       b.	CTE
