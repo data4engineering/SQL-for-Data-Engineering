@@ -1,0 +1,92 @@
+SQL for Data Engineering
+# Basic:
+  1.	Introduction
+  a.	What is SQL
+  b.	What is Database
+  c.	SQL Commands
+  d.	SQL Components
+
+2.	Query Data (Select)
+  a.	Select
+  b.	From
+  c.	Where
+  d.	Order by
+  e.	Group by
+  f.	Having
+  g.	Distinct
+  h.	Top
+
+3.	Data Definition (DDL)
+  a.	CREATE
+  b.	ALTER
+  c.	DROP
+
+4.	Data Manipulation (DML)
+  a.	Insert
+  b.	Update
+  c.	Delete
+
+# Intermediate:
+5.	Filtering Data
+  a.	Comparison operators
+  b.	Logical operators
+  c.	Between
+  d.	In
+  e.	Like
+
+
+
+6.	Combining Data
+  a.	Joining data
+      1.	Basic joins
+          a.	Inner join
+          b.	Left join
+          c.	Right join
+          d.	Full join
+      2.	Advanced joins
+          a.	Left anti join
+          b.	Right anti join
+          c.	Full anti join
+          d.	Cross join
+      3.	Choose right join
+      4.	Join multiple tables
+
+  b.	SET operator
+      1.	Union
+      2.	Union all
+      3.	Except
+      4.	Intersect
+
+  7.	Row-level functions
+      a.	String functions
+      b.	Number functions
+      c.	Date & Time functions
+      d.	Null functions
+      e.	Case statement
+
+  8.	Aggregate & Analytical functions
+      a.	Aggregate functions
+      b.	Window functions
+      c.	Window Aggregate functions
+      d.	Window ranking functions
+      e.	Window value functions
+# Advanced:
+  9.	Advanced SQL Techniques
+      a.	Subqueries
+      b.	CTE
+      c.	Views
+      d.	CTAS Table & Temp Tables
+      e.	Stored Procedures
+      f.	Triggers
+
+  10.	Performance optimization
+      a.	Indexes
+      b.	Partitions
+      c.	Performance tips
+
+  11.	AI & SQL
+
+  12.	SQL Projects
+      a.	Data Warehousing Projects
+      b.	Exploratory Data Analysis (EDA) project
+      c.	Advanced Data Analytics project
