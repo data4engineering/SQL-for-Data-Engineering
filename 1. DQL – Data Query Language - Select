@@ -59,21 +59,21 @@ SELECT TOP 3 * FROM school;
 
 Coding order:
 ---------------------
-SELECT DISTINCT TOP 3
-Col1, 
-SUM(col2)
-FROM table
-WHERE <condition>
-GROUP BY col1
-HAVING SUM(clo2)>20
-ORDER BY col1 ASC;
+    SELECT DISTINCT TOP 3
+    Col1, 
+    SUM(col2)
+    FROM table
+    WHERE <condition>
+    GROUP BY col1
+    HAVING SUM(clo2)>20
+    ORDER BY col1 ASC;
 
 Execution order:
 -----------------
-1.	FROM
-2.	WHERE
-3.	GROUP BY
-4.	HAVING
-5.	SELECT DISTINCT
-6.	ORDER BY 
-7.	TOP
+    1.	FROM
+    2.	WHERE
+    3.	GROUP BY
+    4.	HAVING
+    5.	SELECT DISTINCT
+    6.	ORDER BY 
+    7.	TOP
