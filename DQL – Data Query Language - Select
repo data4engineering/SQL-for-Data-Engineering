@@ -1,0 +1,79 @@
+DQL – Data Query Language - Select:
+------------------------------------
+-> Retrieve all records from a table:
+    SELECT *
+    FROM 
+    CUSTOMERS;
+
+-> Retrieve only few columns:
+    SELECT col1, col2
+    FROM
+    CUSTOMERS;
+
+-> Where: filter your data using where clause
+    SELECT *
+    FROM Table
+    WHERE Condition;
+
+-> Order by : sort your data
+    SELECT * 
+    FROM Table
+    Order by col_name ASC/DESC;
+Note: ASC – Ascending order is by default.
+
+-> Nested Order by: sort data using multiple columns
+    SELECT * 
+    FROM customers
+    ORDER BY country ASC, score DESC;
+
+-> Group By: Aggregate your data (combines rows with same value)
+    SELECT 
+    Student_name,
+    SUM(marks)
+    FROM school
+    GROUP BY student_name
+
+Note: All columns in the SELECT must be either aggregated or included in Group By
+
+Question: Find total marks of each student and show highest marks on top.
+    	SELECT student_name,
+    	SUM(marks) as total_marks
+    	FROM school
+    	GROUP BY student_name
+    	ORDER BY total_marks DESC;
+
+HAVING: Filter your data after aggregation
+-------------------------------------------
+It should be used only with Group By clause.
+
+Note: use WHERE clause before aggregation and use HAVING clause after aggregation (Group By).
+
+Distinct: removes duplicate values
+-----------------------------------
+SELECT DISTINCT student_name
+FROM school;
+
+TOP: limit your data – limit the number of rows returned – it works based on the row numbers
+----------------------------------------------------------------------------------------------
+SELECT TOP 3 * FROM school;
+
+Coding order:
+---------------------
+SELECT DISTINCT TOP 3
+Col1, 
+SUM(col2)
+FROM table
+WHERE <condition>
+GROUP BY col1
+HAVING SUM(clo2)>20
+ORDER BY col1 ASC;
+
+Execution order:
+-----------------
+1.	FROM
+2.	WHERE
+3.	GROUP BY
+4.	HAVING
+5.	SELECT DISTINCT
+6.	ORDER BY 
+7.	TOP
