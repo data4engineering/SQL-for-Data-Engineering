@@ -1,0 +1,31 @@
+DDL – Data Definition Language - (CREATE, ALTER, DELETE):
+---------------------------------------------------------
+
+CREATE: to create new database objects
+--------------------------------------
+    CREATE TABLE <table_name> (
+    Col1 <data_type> <constraint>,
+    Col2 <data_type> <constraint>,
+    Col3 <data_type> <constraint>
+    );
+
+e.g:   CREATE TABLE persons (
+        Id INT NOT NULL,
+        Person_name VARSHACR(50) NOT NULL,
+        Birth_date DATE,
+        Phone VARCHAR(15)
+        CONSTRAINT pk_primary PRIMARY KEY
+        );
+
+ALTER: change table structure (add or remove columns, change data types)
+------------------------------------------------------------------------
+    ALTER TABLE persons 
+    ADD email VARCHAR(50) NOT NULL;
+
+    ALTER TABLE persons
+    DROP COLUMN phone;
+
+DROP:  drop entire database object:
+-----------------------------------
+      DROP TABLE <table_name>;
+      DROP TABLE persons;
