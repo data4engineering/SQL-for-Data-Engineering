@@ -1,0 +1,91 @@
+
+JOINS:
+--------
+In order to connect two tables, we need a common column key (e.g; order_id)
+
+JOINS – types:
+--------------
+Inner join,
+Left join,
+Right join, 
+Full join.
+
+1.	If you want to see only matching data in tables – Inner Join,
+2.	If you want to see all rows of left table and matching data of right – Left join
+3.	If you want to see all rows of right table and matching data of left – Right join
+4.	If you want to see all rows of both tables – Full join
+5.	If you want to see unmatched data only at one side – left anti join
+6.	If you want to see unmatched data both side – full anti join
+
+Inner Join:
+------------
+Syntax:
+SELECT * 
+From A
+Inner join B
+On A.key = B.key;
+
+Example:
+select 
+c.id, 
+c.first_name, 
+o.order_id, 
+o.sales
+from customers as c
+inner join orders as o
+on c.id=o.customer_id;
+
+Left Join:
+-----------
+Syntax:
+SELECT * 
+From A
+Left join B
+On A.key = B.key;
+
+e.g: Get all customers along with orders, including without ordered.
+select 
+c.id, 
+c.first_name, 
+o.order_id, 
+o.sales
+from customers as c
+left join orders as o
+on c.id=o.customer_id;
+
+Right join:
+------------
+Syntax:
+SELECT * 
+From A
+Right join B
+On A.key = B.key;
+e.g: Get all orders info along with customers, including without matching customers.
+ 
+select 
+c.id, 
+c.first_name, 
+o.order_id, 
+o.sales
+from customers as c
+right join orders as o
+on c.id=o.customer_id;
+
+Full Join: 
+-----------
+Returns all rows from both tables (matching and unmatching)
+SELECT * 
+From A
+full join B
+On A.key = B.key;
+
+Example:
+select 
+c.id, 
+c.first_name, 
+o.order_id, 
+o.sales
+from customers as c
+full join orders as o
+on c.id = o.customer_id
+
