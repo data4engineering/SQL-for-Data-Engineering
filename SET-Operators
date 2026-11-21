@@ -1,0 +1,64 @@
+SET Operators
+1.	UNION,
+2.	UNION ALL,
+3.	EXCEPT,
+4.	INTERSECT
+Rules of SET Operators:
+1.	Order by can used only once
+2.	Same number of columns should be there
+3.	Data types should be matched
+4.	Columns should be in the same order
+5.	Aliases are controlled by first query
+6.	Mapping correct columns
+
+1.	UNION
+-	Returns all distinct rows from both queries (removes duplicate rows)
+Example: Combine the data from Employees and Customers into one table using UNION
+SELECT
+    FirstName,
+    LastName
+FROM Sales.Customers
+UNION
+SELECT
+    FirstName,
+    LastName
+FROM Sales.Employees;
+
+2.	UNION ALL
+-	Returns all rows from both queries including duplicate rows.
+Example: Combine the data from Employees and Customers into one table, including duplicates, using UNION ALL
+SELECT
+    FirstName,
+    LastName
+FROM Sales.Customers
+UNION ALL
+SELECT
+    FirstName,
+    LastName
+FROM Sales.Employees;
+
+3.	EXCEPT
+-	Returns all distinct rows from the first query that are not found in the second query.
+Example: Find customers who are NOT employees using EXCEPT
+SELECT
+    FirstName,
+    LastName
+FROM Sales.Customers
+EXCEPT
+SELECT
+    FirstName,
+    LastName
+FROM Sales.Employees;
+
+4.	INTERSECT
+-	Returns common rows between the two tables.
+Example: Find customers who are also employees using INTERSECT
+SELECT
+    FirstName,
+    LastName
+FROM Sales.Customers
+INTERSECT
+SELECT
+    FirstName,
+    LastName
+FROM Sales.Employees;
